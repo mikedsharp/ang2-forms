@@ -6,12 +6,15 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {ContactFormTemplateComponent} from './contact-form/contact-form-template.component'; 
 import {ContactFormReactiveComponent} from './contact-form/contact-form-reactive.component'; 
+import {StartsWithValidatorDirective} from './contact-form/starts-with-validator.directive'; 
+
 
 @NgModule({
   declarations: [
     AppComponent, 
     ContactFormTemplateComponent, 
-    ContactFormReactiveComponent
+    ContactFormReactiveComponent, 
+    StartsWithValidatorDirective
   ],
   imports: [
     BrowserModule,

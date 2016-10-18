@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms'; 
+import {StartsWithValidatorDirective} from './starts-with-validator.directive';
 
 @Component({
     selector: 'contact-form-reactive',
@@ -13,7 +14,8 @@ export class ContactFormReactiveComponent implements OnInit {
         this.formModel = fb.group({
             'name' : ['',  Validators.compose([Validators.required, Validators.minLength(5), Validators.maxLength(10)])], 
             'email': '', 
-            'message': '' 
+            'message': '', 
+            'miketest': ['',  Validators.compose([Validators.required]), StartsWithValidatorDirective]
         }); 
     }
 
