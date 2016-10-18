@@ -6,7 +6,9 @@
 >
 
 <input type="text" [formControl]="formModel.controls['name']"/>
-<div *ngIf="!formModel.controls['name'].valid && formModel.controls['name'].touched">Name is compulsory</div>
+<div *ngIf="formModel.controls['name'].hasError('minlength') && formModel.controls['name'].touched">Name has min length</div>
+<div *ngIf="formModel.controls['name'].hasError('maxlength') && formModel.controls['name'].touched">Name has max length</div>
+<div *ngIf="formModel.controls['name'].hasError('required') && formModel.controls['name'].touched">Name is compulsory</div>
 
 <input type="text"  [formControl]="formModel.controls['email']"/>
 <textarea
