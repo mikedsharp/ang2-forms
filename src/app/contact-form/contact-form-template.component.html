@@ -4,7 +4,11 @@
     <br>
     
     <label for="email"  >Email</label>
-    <input [(ngModel)]="form.email"  name="email" type="email" id="email" />
+    <input #email="ngModel"  [(ngModel)]="form.email"  name="email" type="email" id="email" />
+    <br>
+    <div [hidden]="email.valid || email.pristine">
+        Email is invalid, try again
+    </div>
     <br>
     
     <label for="message">Message</label>

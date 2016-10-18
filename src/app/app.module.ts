@@ -4,12 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import {ContactFormComponent} from './contact-form/contact-form.component'; 
+import {ContactFormTemplateComponent} from './contact-form/contact-form-template.component'; 
 
 @NgModule({
   declarations: [
     AppComponent, 
-    ContactFormComponent
+    ContactFormTemplateComponent
   ],
   imports: [
     BrowserModule,
