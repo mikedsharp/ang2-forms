@@ -1,0 +1,27 @@
+<form>
+    <label for="name">Name</label>
+    <input [(ngModel)]="form.name" name="name" type="text" id="name" />
+    <br>
+    
+    <label for="email"  >Email</label>
+    <input [(ngModel)]="form.email"  name="email" type="email" id="email" />
+    <br>
+    
+    <label for="message">Message</label>
+    <textarea [(ngModel)]="form.message"  name="message" id="message" ></textarea>
+    <br>
+    <label for="site-rating">How do you rate this site?</label>
+    <select [(ngModel)]="form.rating"  name="rating" id="site-rating"> 
+        <option *ngFor="let rating of ratings">{{rating}}</option>
+    </select>
+    <br>
+    <button type="submit">Send</button>
+
+    <br>
+    <hr>
+
+    <h1>{{form.name}}</h1>
+    <h1>{{form.email}}</h1>
+    <h3>{{form.message}}</h3>
+    <h1>{{form.rating}}</h1>
+</form>
