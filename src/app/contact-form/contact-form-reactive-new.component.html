@@ -1,5 +1,5 @@
 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-    <input type="text" forbiddenName="mike" formControlName="name" />
+    <input type="text" formControlName="name" />
     <input type="email" formControlName="email" />
     <input type="text " formControlName="message" />
     <button type="submit" [disabled]="!contactForm.valid">Submit</button>

@@ -1,12 +1,13 @@
 import {Directive, Input, OnChanges, SimpleChanges} from '@angular/core'; 
 import {AbstractControl, NG_VALIDATORS, Validator, ValidatorFn, Validators} from '@angular/forms'; 
+import {ElementRef} from '@angular/core'; 
 
 // our validator function, which sits in the same file as the directive that wraps it 
 export function forbiddenNameValidator(nameRe: RegExp): ValidatorFn {
     return (control: AbstractControl) : {[key:string] : any} => {
         const name = control .value; 
         const no = nameRe.test(name); 
-        return no ? {'forbiddenNName': {name}} : null; 
+        return no ? {'forbiddenName': {name}} : null; 
     }; 
 }
 
