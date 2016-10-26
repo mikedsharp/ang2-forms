@@ -4,3 +4,8 @@
     <input type="text " formControlName="message" />
     <button type="submit" [disabled]="!contactForm.valid">Submit</button>
 </form>
+
+<h2>Submitted Data!</h2>
+<label>Name: </label>&nbsp;<span>{{formModel.name}}</span><br/>
+<label>Email: </label>&nbsp;<span>{{formModel.email}}</span><br/>
+<label>Message: </label>&nbsp;<span>{{formModel.message}}</span><br/>

@@ -36,6 +36,7 @@ export class ReactiveFormNewComponent implements OnInit {
 
     onSubmit(){
         console.log('form submitted!');
+        this.formModel = this.contactForm.value; 
     }
 
     constructor(private fb:FormBuilder) { }
